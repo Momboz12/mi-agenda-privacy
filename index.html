@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad — Mi Agenda</title>
+  <style>
+    :root {
+      --primary: #4A90D9;
+      --bg: #f9f9f9;
+      --card: #ffffff;
+      --text: #222222;
+      --muted: #666666;
+      --border: #e0e0e0;
+      --radius: 12px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                   "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 40px 24px 32px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    header p {
+      font-size: 1rem;
+      opacity: 0.85;
+    }
+
+    .lang-switcher {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      padding: 20px 24px;
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .lang-btn {
+      padding: 8px 24px;
+      border-radius: 24px;
+      border: 2px solid var(--primary);
+      background: transparent;
+      color: var(--primary);
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .lang-btn.active {
+      background: var(--primary);
+      color: white;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 32px 24px 64px;
+    }
+
+    .lang-section { display: none; }
+    .lang-section.visible { display: block; }
+
+    .updated {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 24px 28px;
+      margin-bottom: 20px;
+    }
+
+    .card h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card p {
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    .card p:last-child { margin-bottom: 0; }
+
+    .card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .card ul li {
+      padding: 6px 0 6px 20px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .card ul li:last-child { border-bottom: none; }
+
+    .card ul li::before {
+      content: "•";
+      color: var(--primary);
+      font-weight: bold;
+      position: absolute;
+      left: 4px;
+    }
+
+    .card a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .card a:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 480px) {
+      header h1 { font-size: 1.5rem; }
+      .card { padding: 18px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🗓️ Mi Agenda</h1>
+  <p>Privacy Policy · Política de Privacidad</p>
+</header>
+
+<div class="lang-switcher">
+  <button class="lang-btn active" onclick="switchLang('es')">🇦🇷 Español</button>
+  <button class="lang-btn" onclick="switchLang('en')">🇺🇸 English</button>
+</div>
+
+<div class="container">
+
+  <!-- ===================== ESPAÑOL ===================== -->
+  <div id="lang-es" class="lang-section visible">
+
+    <p class="updated">Última actualización: mayo de 2026</p>
+
+    <div class="card">
+      <h2>📋 ¿Qué es Mi Agenda?</h2>
+      <p>
+        Mi Agenda es una aplicación de agenda personal para Android desarrollada de forma
+        independiente. Te permite gestionar eventos, tareas y recordatorios con sincronización
+        en la nube mediante tu cuenta de Google.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>📦 Información que recopilamos</h2>
+      <ul>
+        <li><strong>Datos de cuenta:</strong> nombre, dirección de email y foto de perfil
+            de tu cuenta de Google. Se usan únicamente para identificarte dentro de la app.</li>
+        <li><strong>Eventos y tareas:</strong> el contenido que vos mismo creás (títulos,
+            fechas, descripciones, etiquetas). Se almacena localmente en tu dispositivo y
+            en Google Firestore vinculado a tu cuenta.</li>
+        <li><strong>Datos de uso anónimos:</strong> información técnica sobre errores y
+            fallos de la app, recopilada de forma anónima a través de Firebase Crashlytics.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🎯 Cómo usamos tu información</h2>
+      <ul>
+        <li>Para sincronizar tus datos entre dispositivos a través de tu cuenta Google.</li>
+        <li>Para enviarte los recordatorios y notificaciones que vos configurás.</li>
+        <li>Para mejorar la estabilidad de la app mediante reportes anónimos de errores.</li>
+        <li><strong>No compartimos tu información con terceros.</strong></li>
+        <li><strong>No usamos tu información con fines publicitarios.</strong></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🔧 Servicios de terceros</h2>
+      <p>La app utiliza los siguientes servicios de Google, sujetos a su propia política de privacidad:</p>
+      <ul>
+        <li><strong>Firebase Authentication</strong> — inicio de sesión con cuenta Google</li>
+        <li><strong>Cloud Firestore</strong> — sincronización y respaldo de tus datos</li>
+        <li><strong>Firebase Crashlytics</strong> — detección anónima de errores técnicos</li>
+      </ul>
+      <p style="margin-top:12px">
+        Política de privacidad de Google:
+        <a href="https://policies.google.com/privacy" target="_blank">
+          policies.google.com/privacy
+        </a>
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>🔒 Seguridad</h2>
+      <p>
+        Tus datos se almacenan en Google Firestore con acceso restringido exclusivamente
+        a tu cuenta de usuario. La app ofrece bloqueo con huella dactilar o PIN para
+        proteger el acceso local al dispositivo.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>⚖️ Tus derechos</h2>
+      <ul>
+        <li>Podés eliminar todos tus datos borrando tu cuenta desde la configuración de la app.</li>
+        <li>Podés revocar el acceso de la app desde tu cuenta Google en cualquier momento:
+            <a href="https://myaccount.google.com/permissions" target="_blank">
+              myaccount.google.com/permissions
+            </a>
+        </li>
+        <li>No vendemos ni cedemos tus datos a ninguna empresa o persona.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>👶 Menores de edad</h2>
+      <p>
+        Esta aplicación no está dirigida a menores de 13 años. No recopilamos
+        intencionalmente información de menores de edad.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>✏️ Cambios en esta política</h2>
+      <p>
+        Podemos actualizar esta política ocasionalmente. Cualquier cambio importante
+        será notificado dentro de la app. La fecha de "Última actualización" al inicio
+        de esta página indica la versión vigente.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>📬 Contacto</h2>
+      <p>
+        ¿Tenés preguntas o inquietudes sobre esta política de privacidad?
+        Contactanos en:
+        <a href="mailto:pablo.martinez.garcia.arg@gmail.com">pablo.martinez.garcia.arg@gmail.com</a>
+      </p>
+    </div>
+
+    <div class="card" id="eliminar-cuenta" style="border: 2px solid #e53935;">
+      <h2>🗑️ Eliminación de cuenta y datos</h2>
+      <p>Podés eliminar tu cuenta y todos tus datos de dos maneras:</p>
+      <br>
+      <h3>Opción 1 — Desde la app (recomendada)</h3>
+      <ol style="margin-left:1.2em; margin-top:0.5em; line-height:2em;">
+        <li>Abrí <strong>Mi Agenda</strong></li>
+        <li>Tocá el ícono de <strong>menú (☰)</strong> en la esquina superior izquierda</li>
+        <li>Desplazate hasta el final y tocá <strong>"Eliminar cuenta"</strong></li>
+        <li>Confirmá la acción en el diálogo que aparece</li>
+      </ol>
+      <br>
+      <h3>Opción 2 — Por email</h3>
+      <p>Enviá un email a <a href="mailto:pablo.martinez.garcia.arg@gmail.com">pablo.martinez.garcia.arg@gmail.com</a> con el asunto <strong>"Eliminar cuenta Mi Agenda"</strong> indicando el email de tu cuenta de Google.</p>
+      <br>
+      <h3>¿Qué se borra?</h3>
+      <ul style="margin-left:1.2em; margin-top:0.5em; line-height:2em;">
+        <li>✅ Todos tus eventos</li>
+        <li>✅ Todas tus tareas</li>
+        <li>✅ Todas tus categorías personalizadas</li>
+        <li>✅ Tu cuenta de autenticación</li>
+        <li>✅ Todos los datos en la nube (Firebase Firestore)</li>
+        <li>✅ Todos los datos en el dispositivo (base de datos local)</li>
+      </ul>
+      <br>
+      <p><strong>Tiempo de eliminación:</strong> Los datos se eliminan inmediatamente al confirmar la acción. No se retiene ningún dato después de la eliminación.</p>
+    </div>
+
+  </div>
+  <!-- =================== FIN ESPAÑOL =================== -->
+
+
+  <!-- ===================== ENGLISH ===================== -->
+  <div id="lang-en" class="lang-section">
+
+    <p class="updated">Last updated: May 2026</p>
+
+    <div class="card">
+      <h2>📋 What is Mi Agenda?</h2>
+      <p>
+        Mi Agenda is a personal agenda app for Android, independently developed.
+        It lets you manage events, tasks and reminders with cloud sync through
+        your Google account.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>📦 Information We Collect</h2>
+      <ul>
+        <li><strong>Account data:</strong> name, email address and profile photo from
+            your Google account. Used only to identify you within the app.</li>
+        <li><strong>Events and tasks:</strong> the content you create yourself (titles,
+            dates, descriptions, tags). Stored locally on your device and in Google
+            Firestore linked to your account.</li>
+        <li><strong>Anonymous usage data:</strong> technical information about app errors
+            and crashes, collected anonymously through Firebase Crashlytics.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🎯 How We Use Your Information</h2>
+      <ul>
+        <li>To sync your data across devices via your Google account.</li>
+        <li>To deliver the reminders and notifications you configure.</li>
+        <li>To improve app stability through anonymous crash reports.</li>
+        <li><strong>We do not share your information with third parties.</strong></li>
+        <li><strong>We do not use your information for advertising purposes.</strong></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🔧 Third-Party Services</h2>
+      <p>The app uses the following Google services, subject to their own privacy policies:</p>
+      <ul>
+        <li><strong>Firebase Authentication</strong> — Google account sign-in</li>
+        <li><strong>Cloud Firestore</strong> — data sync and backup</li>
+        <li><strong>Firebase Crashlytics</strong> — anonymous technical error detection</li>
+      </ul>
+      <p style="margin-top:12px">
+        Google's privacy policy:
+        <a href="https://policies.google.com/privacy" target="_blank">
+          policies.google.com/privacy
+        </a>
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>🔒 Security</h2>
+      <p>
+        Your data is stored in Google Firestore with access restricted exclusively
+        to your user account. The app offers fingerprint or PIN lock to protect
+        local access on your device.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>⚖️ Your Rights</h2>
+      <ul>
+        <li>You can delete all your data by deleting your account in the app settings.</li>
+        <li>You can revoke app access from your Google account at any time:
+            <a href="https://myaccount.google.com/permissions" target="_blank">
+              myaccount.google.com/permissions
+            </a>
+        </li>
+        <li>We do not sell or transfer your data to any company or individual.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>👶 Children</h2>
+      <p>
+        This application is not directed at children under 13. We do not
+        intentionally collect information from minors.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>✏️ Changes to This Policy</h2>
+      <p>
+        We may update this policy occasionally. Any significant changes will be
+        notified within the app. The "Last updated" date at the top of this page
+        indicates the current version.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>📬 Contact</h2>
+      <p>
+        Do you have questions or concerns about this privacy policy?
+        Contact us at:
+        <a href="mailto:pablo.martinez.garcia.arg@gmail.com">pablo.martinez.garcia.arg@gmail.com</a>
+      </p>
+    </div>
+
+    <div class="card" id="delete-account" style="border: 2px solid #e53935;">
+      <h2>🗑️ Account &amp; Data Deletion</h2>
+      <p>You can delete your account and all your data in two ways:</p>
+      <br>
+      <h3>Option 1 — From the app (recommended)</h3>
+      <ol style="margin-left:1.2em; margin-top:0.5em; line-height:2em;">
+        <li>Open <strong>Mi Agenda</strong></li>
+        <li>Tap the <strong>menu icon (☰)</strong> in the top left corner</li>
+        <li>Scroll to the bottom and tap <strong>"Delete account"</strong></li>
+        <li>Confirm the action in the dialog that appears</li>
+      </ol>
+      <br>
+      <h3>Option 2 — By email</h3>
+      <p>Send an email to <a href="mailto:pablo.martinez.garcia.arg@gmail.com">pablo.martinez.garcia.arg@gmail.com</a> with the subject <strong>"Delete Mi Agenda account"</strong> including your Google account email.</p>
+      <br>
+      <h3>What gets deleted?</h3>
+      <ul style="margin-left:1.2em; margin-top:0.5em; line-height:2em;">
+        <li>✅ All your events</li>
+        <li>✅ All your tasks</li>
+        <li>✅ All your custom categories</li>
+        <li>✅ Your authentication account</li>
+        <li>✅ All cloud data (Firebase Firestore)</li>
+        <li>✅ All local device data (local database)</li>
+      </ul>
+      <br>
+      <p><strong>Deletion time:</strong> Data is deleted immediately upon confirming the action. No data is retained after deletion.</p>
+    </div>
+
+  </div>
+  <!-- =================== END ENGLISH =================== -->
+
+</div>
+
+<footer>
+  Mi Agenda &nbsp;·&nbsp; © 2026 &nbsp;·&nbsp;
+  <a href="mailto:pablo.martinez.garcia.arg@gmail.com">pablo.martinez.garcia.arg@gmail.com</a>
+</footer>
+
+<script>
+  function switchLang(lang) {
+    document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('visible'));
+    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('visible');
+    event.target.classList.add('active');
+  }
+
+  // Al cargar la página, detectar el hash para mostrar la sección correcta
+  window.addEventListener('DOMContentLoaded', function () {
+    var hash = window.location.hash.replace('#', '');
+    if (!hash) return;
+
+    // Buscar en qué sección de idioma está el elemento con ese id
+    var target = document.getElementById(hash);
+    if (!target) return;
+
+    var section = target.closest('.lang-section');
+    if (section) {
+      // Mostrar la sección de idioma correcta
+      document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('visible'));
+      section.classList.add('visible');
+
+      // Activar el botón de idioma correspondiente
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+      var langId = section.id.replace('lang-', '');
+      var activeBtn = document.querySelector('.lang-btn[onclick*="\'' + langId + '\'"]');
+      if (activeBtn) activeBtn.classList.add('active');
+    }
+
+    // Scroll al elemento después de un pequeño delay
+    setTimeout(function () {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  });
+</script>
+
+</body>
+</html>
+
